@@ -453,6 +453,14 @@ build_u_boot () {
 			echo "patch -p1 < \"${p_dir}/0002-U-Boot-BeagleBone-Cape-Manager.patch\""
 			${git} "${p_dir}/0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch"
 			${git} "${p_dir}/0002-U-Boot-BeagleBone-Cape-Manager.patch"
+			if [ "$bela" = "true" ]
+			then
+				for patch in ${p_dir}/../bela/*.patch;
+				do
+					echo "patch -p1 < \"$patch\""
+				${git} "$patch"
+				done
+			fi
 			;;
 		am335x_boneblack)
 			echo "patch -p1 < \"${p_dir}/0001-am335x_evm-uEnv.txt-bootz-n-fixes.patch\""
@@ -1482,6 +1490,13 @@ wandboard () {
 ###artik5
 ###artik10
 
+cleanup
+build_stable="true"
+board="am335x_evm"
+bela=true
+build_uboot_gnueabihf
+bela=false
+exit
 am335x_evm
 am335x_boneblack_flasher
 am43xx_evm
