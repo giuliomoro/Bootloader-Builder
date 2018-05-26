@@ -954,11 +954,11 @@ build_u_boot () {
 		#SPL based targets, need MLO and u-boot.img from u-boot
 		if [ ! "${UBOOT_DONE}" ] && [ -f ${DIR}/scratch/${project}/MLO ] && [ -f ${DIR}/scratch/${project}/u-boot.img ] ; then
 			filename_search="MLO"
-			filename_id="deploy/${board}/MLO-${uboot_filename}"
+			filename_id="deploy/${board}/MLO"
 			file_save
 
 			filename_search="u-boot.img"
-			filename_id="deploy/${board}/u-boot-${uboot_filename}.img"
+			filename_id="deploy/${board}/u-boot.img"
 			file_save
 			UBOOT_DONE=1
 		fi
