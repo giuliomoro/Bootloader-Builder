@@ -1,0 +1,31 @@
+From f9c3fc82d55ff7040501c5abedaae539c7d5aa4c Mon Sep 17 00:00:00 2001
+From: Liam Donovan <liam@liamdonovan.co.uk>
+Date: Mon, 28 May 2018 21:06:49 +0100
+Subject: [PATCH] bela bootcmd
+
+---
+ include/configs/am335x_evm.h | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/include/configs/am335x_evm.h b/include/configs/am335x_evm.h
+index 5582a66..5859f60 100644
+--- a/include/configs/am335x_evm.h
++++ b/include/configs/am335x_evm.h
+@@ -231,7 +231,13 @@
+ 	NANDARGS \
+ 	NETARGS \
+ 	DFUARGS \
+-	BOOTENV
++	BOOTENV \
++	"bootcmd="	\
++		"if load mmc 0:1 ${loadaddr} uEnv.txt; then echo \"booting from SD card\"; else load mmc 1:1 ${loadaddr} uEnv.txt; echo \"booting from eMMC\"; fi;"	\
++		"env import -t ${loadaddr} ${filesize};"	\
++		"run findfdt;"	\
++		"run uenvcmd;"
++
+ #endif
+ 
+ /* NS16550 Configuration */
+-- 
+2.1.4
+
