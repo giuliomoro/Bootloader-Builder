@@ -1,0 +1,47 @@
+From 01cc9680f9b92c2f843008e08e5c739239c5b083 Mon Sep 17 00:00:00 2001
+From: Giulio Moro <giuliomoro@yahoo.it>
+Date: Fri, 20 Jul 2018 10:37:32 +0100
+Subject: [PATCH] Allow to override the CPU speed at compile time
+
+---
+ board/ti/am335x/board.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/board/ti/am335x/board.c b/board/ti/am335x/board.c
+index b39656a..79163b0 100644
+--- a/board/ti/am335x/board.c
++++ b/board/ti/am335x/board.c
+@@ -42,6 +42,9 @@
+ #include "board.h"
+ #include "hash-string.h"
+ 
++// this has to be one of MPUPLL_M_1000 MPUPLL_M_600 MPUPLL_M_500 MPUPLL_M_300
++// #define OVERRIDE_CPU_SPEED MPUPLL_M_500
++
+ DECLARE_GLOBAL_DATA_PTR;
+ 
+ /* GPIO that controls power to DDR on EVM-SK */
+@@ -754,6 +757,9 @@ const struct dpll_params *get_dpll_mpu_params(void)
+ 
+ 	if (board_is_pb() || board_is_bone_lt() || board_is_beaglelogic())
+ 		freq = MPUPLL_M_1000;
++#ifdef OVERRIDE_CPU_SPEED
++	freq = OVERRIDE_CPU_SPEED;
++#endif
+ 
+ 	switch (freq) {
+ 	case MPUPLL_M_1000:
+@@ -801,6 +807,10 @@ static void scale_vcores_bone(int freq)
+ 	if (board_is_pb() || board_is_bone_lt() || board_is_beaglelogic())
+ 		freq = MPUPLL_M_1000;
+ 
++#ifdef OVERRIDE_CPU_SPEED
++	freq = OVERRIDE_CPU_SPEED;
++#endif
++
+ 	switch (freq) {
+ 	case MPUPLL_M_1000:
+ 		mpu_vdd = TPS65217_DCDC_VOLT_SEL_1325MV;
+-- 
+2.7.4
+
