@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# Copyright (c) 2010-2018 Robert Nelson <robertcnelson@gmail.com>
+# Copyright (c) 2010-2019 Robert Nelson <robertcnelson@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -119,11 +119,12 @@ gcc_arm_embedded_6 () {
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2017.08/arm-eabi/gcc-linaro-6.4.1-2017.08-x86_64_arm-eabi.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2017.11/arm-eabi/gcc-linaro-6.4.1-2017.11-x86_64_arm-eabi.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2018.05/arm-eabi/gcc-linaro-6.4.1-2018.05-x86_64_arm-eabi.tar.xz
+		#https://releases.linaro.org/components/toolchain/binaries/6.5-2018.12/arm-eabi/gcc-linaro-6.5.0-2018.12-x86_64_arm-eabi.tar.xz
 		#
 
-		gcc_version="6.4"
-		gcc_minor=".1"
-		release="18.05"
+		gcc_version="6.5"
+		gcc_minor=".0"
+		release="18.12"
 		target="arm-eabi"
 
 		version="components/toolchain/binaries/${gcc_version}-20${release}/${target}"
@@ -146,12 +147,13 @@ gcc_arm_embedded_7 () {
 		#https://releases.linaro.org/components/toolchain/binaries/7.1-2017.08/arm-eabi/gcc-linaro-7.1.1-2017.08-x86_64_arm-eabi.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-eabi/gcc-linaro-7.2.1-2017.11-x86_64_arm-eabi.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-eabi/gcc-linaro-7.3.1-2018.05-x86_64_arm-eabi.tar.xz
+		#https://releases.linaro.org/components/toolchain/binaries/7.4-2019.02/arm-eabi/gcc-linaro-7.4.1-2019.02-x86_64_arm-eabi.tar.xz
 		#
 		#site="https://snapshots.linaro.org"
 
-		gcc_version="7.3"
+		gcc_version="7.4"
 		gcc_minor=".1"
-		release="18.05"
+		release="19.02"
 		target="arm-eabi"
 
 		version="components/toolchain/binaries/${gcc_version}-20${release}/${target}"
@@ -198,11 +200,12 @@ gcc_linaro_gnueabihf_6 () {
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2017.08/arm-linux-gnueabihf/gcc-linaro-6.4.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2017.11/arm-linux-gnueabihf/gcc-linaro-6.4.1-2017.11-x86_64_arm-linux-gnueabihf.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/6.4-2018.05/arm-linux-gnueabihf/gcc-linaro-6.4.1-2018.05-x86_64_arm-linux-gnueabihf.tar.xz
+		#https://releases.linaro.org/components/toolchain/binaries/6.5-2018.12/arm-linux-gnueabihf/gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabihf.tar.xz
 		#
 
-		gcc_version="6.4"
-		gcc_minor=".1"
-		release="18.05"
+		gcc_version="6.5"
+		gcc_minor=".0"
+		release="18.12"
 		target="arm-linux-gnueabihf"
 
 		version="components/toolchain/binaries/${gcc_version}-20${release}/${target}"
@@ -225,12 +228,13 @@ gcc_linaro_gnueabihf_7 () {
 		#https://releases.linaro.org/components/toolchain/binaries/7.1-2017.08/arm-linux-gnueabihf/gcc-linaro-7.1.1-2017.08-x86_64_arm-linux-gnueabihf.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/7.2-2017.11/arm-linux-gnueabihf/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabihf.tar.xz
 		#https://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabihf/gcc-linaro-7.3.1-2018.05-x86_64_arm-linux-gnueabihf.tar.xz
+		#https://releases.linaro.org/components/toolchain/binaries/7.4-2019.02/arm-linux-gnueabihf/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf.tar.xz
 		#
 		#site="https://snapshots.linaro.org"
 
-		gcc_version="7.3"
+		gcc_version="7.4"
 		gcc_minor=".1"
-		release="18.05"
+		release="19.02"
 		target="arm-linux-gnueabihf"
 
 		version="components/toolchain/binaries/${gcc_version}-20${release}/${target}"
@@ -246,15 +250,16 @@ gcc_linaro_gnueabihf_7 () {
 
 gcc_arm_arm_linux_gnueabihf_8 () {
 		#
-		#https://developer.arm.com/open-source/gnu-toolchain/gnu-a/downloads
 		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2018.08/gcc-arm-8.2-2018.08-x86_64-arm-linux-gnueabihf.tar.xz
+		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2018.11/gcc-arm-8.2-2018.11-x86_64-arm-linux-gnueabihf.tar.xz
+		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2019.01/gcc-arm-8.2-2019.01-x86_64-arm-linux-gnueabihf.tar.xz
 		#
 		site="https://developer.arm.com/-/media/Files/downloads/gnu-a"
 		archive_site="https://developer.arm.com/-/media/Files/downloads/gnu-a"
 
 		gcc_version="8.2"
 		gcc_minor=""
-		release="18.08"
+		release="19.01"
 		target="arm-linux-gnueabihf"
 
 		version="${gcc_version}-20${release}"
@@ -270,15 +275,16 @@ gcc_arm_arm_linux_gnueabihf_8 () {
 
 gcc_arm_aarch64_linux_gnu_8 () {
 		#
-		#https://developer.arm.com/open-source/gnu-toolchain/gnu-a/downloads
 		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2018.08/gcc-arm-8.2-2018.08-x86_64-aarch64-linux-gnu.tar.xz
+		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2018.11/gcc-arm-8.2-2018.11-x86_64-aarch64-linux-gnu.tar.xz
+		#https://developer.arm.com/-/media/Files/downloads/gnu-a/8.2-2019.01/gcc-arm-8.2-2019.01-x86_64-aarch64-linux-gnu.tar.xz
 		#
 		site="https://developer.arm.com/-/media/Files/downloads/gnu-a"
 		archive_site="https://developer.arm.com/-/media/Files/downloads/gnu-a"
 
 		gcc_version="8.2"
 		gcc_minor=""
-		release="18.08"
+		release="19.01"
 		target="aarch64-linux-gnu"
 
 		version="${gcc_version}-20${release}"
@@ -392,12 +398,22 @@ build_u_boot () {
 	echo "make ARCH=arm CROSS_COMPILE=\"${CC}\" ${BUILDTARGET}"
 	echo "-----------------------------"
 
-	#v2018.07
+	#v2018.09
 	p_dir="${DIR}/patches/${uboot_old}"
 	if [ "${old}" ] ; then
 		#r1: initial release
-		#r2: (pending)
-		RELEASE_VER="-r1" #bump on every change...
+		#r2: am335x_evm: fix overlays...
+		#r3: rebuild with all enabled...
+		#r4: am335x_evm bring back bug/feature..
+		#r5: add pocketbeagle eeprom...
+		#r6: am335x_evm: drop marsboard support...
+		#r7: am335x_evm: fix default state of i2c2_pin_mux and mmc0_sdwp...
+		#r8: am335x_evm: revert i2c2_pin_mux state, broke capes...
+		#r9: am335x_evm: add BB-BONE-NH10C-01-00A0
+		#r10: am335x_evm: fix BBE
+		#r11: am335x_evm: really fix BBE
+		#r12: (pending)
+		RELEASE_VER="-r11" #bump on every change...
 		#halt_patching_uboot
 
 		case "${board}" in
@@ -470,10 +486,6 @@ build_u_boot () {
 		socfpga_de0_nano_soc)
 			pfile="0001-de0_nano-fixes.patch" ; echo "patch -p1 < \"${p_dir}/${pfile}\"" ; ${git} "${p_dir}/${pfile}"
 			;;
-		udoo)
-			echo "patch -p1 < \"${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch\""
-			${git} "${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch"
-			;;
 		vf610twr)
 			echo "patch -p1 < \"${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch\""
 			${git} "${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch"
@@ -485,18 +497,14 @@ build_u_boot () {
 		esac
 	fi
 
-	#v2018.09
+	#v2019.01
 	p_dir="${DIR}/patches/${uboot_stable}"
 	if [ "${stable}" ] ; then
 		#r1: initial release
-		#r2: am335x_evm: fix overlays...
-		#r3: rebuild with all enabled...
-		#r4: am335x_evm bring back bug/feature..
-		#r5: add pocketbeagle eeprom...
-		#r6: am335x_evm: drop marsboard support...
-		#r7: am335x_evm: fix default state of i2c2_pin_mux and mmc0_sdwp...
-		#r8: (pending)
-		RELEASE_VER="-r7" #bump on every change...
+		#r2: am335x_evm: revert i2c2_pin_mux state, broke capes...
+		#r3: am335x_evm: add BB-BONE-NH10C-01-00A0
+		#r4: (pending)
+		RELEASE_VER="-r3" #bump on every change...
 		#halt_patching_uboot
 
 		case "${board}" in
@@ -526,6 +534,10 @@ build_u_boot () {
 			echo "patch -p1 < \"${p_dir}/0001-am43xx_evm-fixes.patch\""
 			${git} "${p_dir}/0001-am43xx_evm-fixes.patch"
 			;;
+		am57xx_evm)
+			echo "patch -p1 < \"${p_dir}/0001-am57xx_evm-fixes.patch\""
+			${git} "${p_dir}/0001-am57xx_evm-fixes.patch"
+			;;
 		at91sam9x5ek_mmc)
 			echo "patch -p1 < \"${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch\""
 			${git} "${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch"
@@ -571,15 +583,13 @@ build_u_boot () {
 			${git} "${p_dir}/0001-omap5_common-uEnv.txt-bootz-n-fixes.patch"
 			;;
 		sama5d2_xplained_mmc|sama5d3xek_mmc|sama5d3_xplained_mmc|sama5d4_xplained_mmc)
+			echo "patch -p1 < \"${p_dir}/0001-ARM-at91-Convert-SPL_GENERATE_ATMEL_PMECC_HEADER-to-.patch\""
 			echo "patch -p1 < \"${p_dir}/0001-sama5dX-fixes.patch\""
+			${git} "${p_dir}/0001-ARM-at91-Convert-SPL_GENERATE_ATMEL_PMECC_HEADER-to-.patch"
 			${git} "${p_dir}/0001-sama5dX-fixes.patch"
 			;;
 		socfpga_de0_nano_soc)
 			pfile="0001-de0_nano-fixes.patch" ; echo "patch -p1 < \"${p_dir}/${pfile}\"" ; ${git} "${p_dir}/${pfile}"
-			;;
-		udoo)
-			echo "patch -p1 < \"${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch\""
-			${git} "${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch"
 			;;
 		vf610twr)
 			echo "patch -p1 < \"${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch\""
@@ -592,15 +602,12 @@ build_u_boot () {
 		esac
 	fi
 
-	#v2018.11
+	#v2019.04
 	p_dir="${DIR}/patches/${uboot_testing}"
 	if [ "${testing}" ] ; then
 		#r1: initial release
-		#r2: am335x eeprom, dtb overlays..
-		#r3: am335x_evm: drop marsboard support...
-		#r4: am335x_evm: fix default state of i2c2_pin_mux and mmc0_sdwp...
-		#r5: (pending)
-		RELEASE_VER="-r4" #bump on every change...
+		#r2: (pending)
+		RELEASE_VER="-r1" #bump on every change...
 		#halt_patching_uboot
 
 		case "${board}" in
@@ -622,6 +629,10 @@ build_u_boot () {
 			echo "patch -p1 < \"${p_dir}/0001-am43xx_evm-fixes.patch\""
 			${git} "${p_dir}/0001-am43xx_evm-fixes.patch"
 			;;
+		am57xx_evm)
+			echo "patch -p1 < \"${p_dir}/0001-am57xx_evm-fixes.patch\""
+			${git} "${p_dir}/0001-am57xx_evm-fixes.patch"
+			;;
 		at91sam9x5ek_mmc)
 			echo "patch -p1 < \"${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch\""
 			${git} "${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch"
@@ -673,10 +684,6 @@ build_u_boot () {
 		socfpga_de0_nano_soc)
 			pfile="0001-de0_nano-fixes.patch" ; echo "patch -p1 < \"${p_dir}/${pfile}\"" ; ${git} "${p_dir}/${pfile}"
 			;;
-		udoo)
-			echo "patch -p1 < \"${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch\""
-			${git} "${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch"
-			;;
 		vf610twr)
 			echo "patch -p1 < \"${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch\""
 			${git} "${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch"
@@ -688,7 +695,7 @@ build_u_boot () {
 		esac
 	fi
 
-	#v2019.01
+	#v2019.07
 	p_dir="${DIR}/patches/next"
 	if [ "${next}" ] ; then
 		#r1: initial release
@@ -715,6 +722,10 @@ build_u_boot () {
 			echo "patch -p1 < \"${p_dir}/0001-am43xx_evm-fixes.patch\""
 			${git} "${p_dir}/0001-am43xx_evm-fixes.patch"
 			;;
+		am57xx_evm)
+			echo "patch -p1 < \"${p_dir}/0001-am57xx_evm-fixes.patch\""
+			${git} "${p_dir}/0001-am57xx_evm-fixes.patch"
+			;;
 		at91sam9x5ek_mmc)
 			echo "patch -p1 < \"${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch\""
 			${git} "${p_dir}/0001-at91sam9x5ek-uEnv.txt-bootz-n-fixes.patch"
@@ -765,10 +776,6 @@ build_u_boot () {
 			;;
 		socfpga_de0_nano_soc)
 			pfile="0001-de0_nano-fixes.patch" ; echo "patch -p1 < \"${p_dir}/${pfile}\"" ; ${git} "${p_dir}/${pfile}"
-			;;
-		udoo)
-			echo "patch -p1 < \"${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch\""
-			${git} "${p_dir}/0001-udoo-uEnv.txt-bootz-n-fixes.patch"
 			;;
 		vf610twr)
 			echo "patch -p1 < \"${p_dir}/0001-vf610twr-uEnv.txt-bootz-n-fixes.patch\""
@@ -1289,20 +1296,28 @@ A20_OLinuXino_MICRO () {
 	board="A20-OLinuXino_MICRO" ; always_stable_n_testing
 }
 
+ls1021atwr () {
+	board="ls1021atwr_sdcard_qspi" ; always_stable_n_testing
+}
+
+udoo () {
+	board="udoo" ; always_stable_n_testing
+}
+
 am335x_evm () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
-	build_testing="true"
+#	build_testing="true"
 
 	board="am335x_evm" ; build_uboot_gnueabihf
 }
 
 am335x_boneblack_flasher () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
-	build_testing="true"
+#	build_testing="true"
 
 	board="am335x_boneblack"
 	uboot_config="am335x_evm_defconfig"
@@ -1319,7 +1334,12 @@ am43xx_evm () {
 }
 
 am57xx_evm () {
-	board="am57xx_evm" ; always_stable_n_testing
+	cleanup
+#	build_old="true"
+	build_stable="true"
+	build_testing="true"
+
+	board="am57xx_evm" ; build_uboot_gnueabihf
 }
 
 am57xx_evm_ti () {
@@ -1378,13 +1398,9 @@ firefly_rk3288 () {
 	board="firefly-rk3288" ; build_uboot_gnueabihf
 }
 
-ls1021atwr () {
-	board="ls1021atwr_sdcard_qspi" ; always_stable_n_testing
-}
-
 mx23_olinuxino () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx23_olinuxino" ; build_uboot_eabi
@@ -1392,7 +1408,7 @@ mx23_olinuxino () {
 
 mx51evk () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx51evk" ; build_uboot_gnueabihf
@@ -1400,7 +1416,7 @@ mx51evk () {
 
 mx53loco () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx53loco" ; build_uboot_gnueabihf
@@ -1408,7 +1424,7 @@ mx53loco () {
 
 mx6ul_14x14_evk () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx6ul_14x14_evk" ; build_uboot_gnueabihf
@@ -1416,7 +1432,7 @@ mx6ul_14x14_evk () {
 
 mx6ull_14x14_evk () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx6ull_14x14_evk" ; build_uboot_gnueabihf
@@ -1424,7 +1440,7 @@ mx6ull_14x14_evk () {
 
 mx6sabresd () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="mx6sabresd" ; build_uboot_gnueabihf
@@ -1432,7 +1448,7 @@ mx6sabresd () {
 
 omap3_beagle () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="omap3_beagle" ; build_uboot_gnueabihf
@@ -1440,7 +1456,7 @@ omap3_beagle () {
 
 omap4_panda () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="omap4_panda" ; build_uboot_gnueabihf
@@ -1448,7 +1464,7 @@ omap4_panda () {
 
 omap5_uevm () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="omap5_uevm" ; build_uboot_gnueabihf
@@ -1456,7 +1472,7 @@ omap5_uevm () {
 
 sama5d2_xplained () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="sama5d2_xplained_mmc" ; build_uboot_gnueabihf
@@ -1464,7 +1480,7 @@ sama5d2_xplained () {
 
 sama5d3xek () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="sama5d3xek_mmc" ; build_uboot_gnueabihf
@@ -1472,7 +1488,7 @@ sama5d3xek () {
 
 sama5d3_xplained () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="sama5d3_xplained_mmc" ; build_uboot_gnueabihf
@@ -1480,7 +1496,7 @@ sama5d3_xplained () {
 
 sama5d4_xplained () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="sama5d4_xplained_mmc" ; build_uboot_gnueabihf
@@ -1488,18 +1504,10 @@ sama5d4_xplained () {
 
 socfpga_de0_nano_soc () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="socfpga_de0_nano_soc" ; build_uboot_gnueabihf
-}
-
-udoo () {
-	cleanup
-#	build_old="true"
-	build_stable="true"
-	build_testing="true"
-	board="udoo" ; build_uboot_gnueabihf
 }
 
 vf610twr () {
@@ -1512,7 +1520,7 @@ vf610twr () {
 
 wandboard () {
 	cleanup
-#	build_old="true"
+	build_old="true"
 	build_stable="true"
 	build_testing="true"
 	board="wandboard" ; build_uboot_gnueabihf
@@ -1521,7 +1529,7 @@ wandboard () {
 am65x_evm_a53 () {
 	cleanup
 #	build_old="true"
-#	build_stable="true"
+	build_stable="true"
 	build_testing="true"
 	board="am65x_evm_a53" ; build_uboot_aarch64
 }
@@ -1562,8 +1570,7 @@ sama5d2_xplained
 ###sama5d4_xplained
 ###(these are a shared patch...)
 socfpga_de0_nano_soc
-#udoo
-###vf610twr
+vf610twr
 wandboard
 
 #devices with no patches...
@@ -1573,6 +1580,7 @@ A20_OLinuXino_Lime2
 A20_OLinuXino_MICRO
 #firefly_rk3288
 ls1021atwr
+udoo
 
 #development...
 #am65x_evm_a53
