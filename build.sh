@@ -303,7 +303,7 @@ git_generic () {
 	echo "-----------------------------"
 
 	if [ ! -f ${DIR}/git/${project}/.git/config ] ; then
-		git clone git://github.com/RobertCNelson/${project}.git ${DIR}/git/${project}/
+		git clone https://github.com/RobertCNelson/${project}.git ${DIR}/git/${project}/
 	fi
 
 	cd ${DIR}/git/${project}/
