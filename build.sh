@@ -59,6 +59,7 @@ fi
 wget_dl="wget -c --directory-prefix=${gcc_dir}/"
 
 dl_gcc_generic () {
+	if false; then
 	WGET="wget -c --directory-prefix=${gcc_dir}/"
 	if [ ! -f "${gcc_dir}/${directory}/${datestamp}" ] ; then
 		echo "Installing: ${toolchain_name}"
@@ -82,6 +83,10 @@ dl_gcc_generic () {
 		else
 			CC="${gcc_dir}/${directory}/${binary}"
 		fi
+	fi
+	else
+		# get existing one
+		. ../ti-linux-kernel-dev/.CC
 	fi
 }
 
